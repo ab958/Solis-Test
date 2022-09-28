@@ -4,7 +4,7 @@ db.house.aggregate([
       from: "owner",
       localField: "ownerID",
       foreignField: "_id",
-      as: "inventory_docs"
+      as: "general_docs"
     }
   },
   {
@@ -17,7 +17,7 @@ db.house.aggregate([
           }
         },
         {
-          "inventory_docs.province": {
+          "general_docs.province": {
             "$eq": "kpk"
           }
         }
